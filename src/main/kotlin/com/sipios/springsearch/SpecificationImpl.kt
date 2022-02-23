@@ -45,7 +45,7 @@ class SpecificationImpl<T>(private val criteria: SearchCriteria, private val sea
         prefix.removeAt(nestedKey.size - 1)
         var temp: Path<*> = root
         for (s in prefix) {
-            temp = temp.get<T>(s)
+            temp = root.join(s);
         }
 
         return temp
